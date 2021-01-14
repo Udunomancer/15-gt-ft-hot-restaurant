@@ -47,7 +47,14 @@
         id: $('#id').val().trim()
       };
 
-      console.log(reservation);
+      $.post('/api/reserve', reservation).then((response) => {
+        console.log(response);
+        if (response.type === 'table') {
+          alert('Nice you got a table!');
+        } else {
+          alert("Sorry you're on the waitlist...");
+        }
+      });
     });
   </script>
 </body>
