@@ -45,10 +45,10 @@ app.post("/api/reserve", function(req, res) {
     
     if(tableArray.length < 4) {
         tableArray.push(newReservation);
-        res.json("Reservation Type: Table");
+        res.json({type: "table"});
     } else {
         waitlistArray.push(newReservation);
-        res.json("Reservation Type: Wait List");
+        res.json({type: "waitlist"});
     }
 
    
