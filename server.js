@@ -40,10 +40,19 @@ app.get("/api/reservations", function(req, res) {
 })
 
 // ---Create a table/reservation---
-// app.post("/api/reserve", function(req, res) {
-//     const newReservation = req.body;
+app.post("/api/reserve", function(req, res) {
+    const newReservation = req.body;
+    
+    if(tableArray.length < 4) {
+        tableArray.push(newReservation);
+        res.json("Reservation Type: Table");
+    } else {
+        waitlistArray.push(newReservation);
+        res.json("Reservation Type: Wait List");
+    }
 
-// })
+   
+})
 
 // ===Listen on the Port===
 app.listen(PORT, function() {
