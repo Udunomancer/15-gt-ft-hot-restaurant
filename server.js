@@ -42,7 +42,7 @@ app.get("/api/reservations", function(req, res) {
 app.post("/api/reserve", function(req, res) {
     const newReservation = req.body;
     
-    if(tableArray.length < 4) {
+    if(tableArray.length <= 4) {
         tableArray.push(newReservation);
         res.json({type: "table"});
     } else {
