@@ -35,8 +35,7 @@ app.get("/tables", function(req, res) {
 // ===API Routes===
 // ---Get all table data---
 app.get("/api/reservations", function(req, res) {
-    const allReservations = tableArray.concat(waitlistArray);
-    return res.json(allReservations);
+    return res.json({reservations: tableArray, waitlist: waitlistArray});
 })
 
 // ---Create a table/reservation---
@@ -50,8 +49,6 @@ app.post("/api/reserve", function(req, res) {
         waitlistArray.push(newReservation);
         res.json({type: "waitlist"});
     }
-
-   
 })
 
 // ===Listen on the Port===
