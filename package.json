@@ -1,0 +1,24 @@
+{
+  "name": "15-gt-ft-hot-restaurant",
+  "version": "1.0.0",
+  "description": "* Create the front-end (visuals) for home page, reservation form, and reservation views.\r   * create 3 html files with html5 boilerplate\r   * include bootstrap, jQuery\r * Create a basic server using Express.JS\r   * create server.js file\r   * include express\r   * create express instance\r   * create port\r   * listen for port\r   * url encoding (.use)\r   * add routes\r * Create a few array variables that will hold the data\r   * declare table array and waiting list array\r * Create a set of routes for getting and posting table data\r   * create routes\r   * get root page\r   * get tables page\r   * get reservation page\r   * post reservation\r * Create a set of routes for displaying the HTML pages\r   * create api routes\r   * api/tables\r   * api/waitlist\r   * post to tables\r * Use jQuery to run AJAX calls to GET and POST data from users to the Express server\r   * $.get and $.post calls",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Udunomancer/15-gt-ft-hot-restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Udunomancer/15-gt-ft-hot-restaurant/issues"
+  },
+  "homepage": "https://github.com/Udunomancer/15-gt-ft-hot-restaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
